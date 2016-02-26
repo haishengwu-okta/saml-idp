@@ -1,4 +1,3 @@
-
 /**
  * Module dependencies.
  */
@@ -125,9 +124,9 @@ var argv = yargs
         "Please generate a key-pair for the IdP using the following openssl command:\n" +
         "\topenssl req -x509 -new -newkey rsa:2048 -nodes -subj '/C=US/ST=California/L=San Francisco/O=JankyCo/CN=Test Identity Provider' -keyout idp-private-key.pem -out idp-public-cert.pem -days 7300"
     }
-
     argv.cert = fs.readFileSync(argv.cert);
     argv.key = fs.readFileSync(argv.key);
+    return true;
   })
   .check(function(argv, aliases) {
     if (argv.https) {
@@ -143,6 +142,7 @@ var argv = yargs
       argv.httpsPrivateKey = fs.readFileSync(argv.httpsPrivateKey).toString();
       argv.httpsCert = fs.readFileSync(argv.httpsCert).toString();
     }
+    return true;
   })
   .check(function(argv, aliases) {
     var hasFormat = function(file, header) {
