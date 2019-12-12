@@ -1,33 +1,42 @@
 {
   "name": "saml-idp",
-  "description": "Sample Identity Provider (IdP) for testing SAML 2.0 Web Browser SSO Profile",
-  "version": "0.2.0",
-  "private": true,
+  "description": "Test Identity Provider (IdP) for SAML 2.0 Web Browser SSO Profile",
+  "version": "1.2.0",
+  "private": false,
   "author": "Karl McGuinness",
-  "license": {
-    "type": "MIT",
-    "url": "https://github.com/mcguinness/saml-idp/blob/master/LICENSE"
-  },
-  "main": "./app.js",
+  "keywords": [
+    "saml",
+    "idp",
+    "okta"
+  ],
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/mcguinness/saml-idp"
   },
+  "bugs": {
+    "url": "https://github.com/mcguinness/saml-idp/issues"
+  },
+  "main": "./app.js",
   "scripts": {
     "start": "node app.js"
   },
+  "bin": "./bin/run.js",
   "engines": {
-    "node": ">=0.8.8"
+    "node": ">=6.0.0"
   },
   "dependencies": {
-    "body-parser": "~1.14.2",
-    "cookie-parser": "~1.4.0",
-    "debug": "~2.2.0",
-    "express": "~4.13.3",
-    "extend": "^3.0.0",
-    "hbs": "~4.0.0",
-    "morgan": "~1.6.1",
-    "samlp": "0.14.0",
-    "yargs": "^3.31.0"
+    "body-parser": "~1.18.3",
+    "chalk": "^2.4.1",
+    "debug": "~4.1.1",
+    "express": "^4.16.4",
+    "express-session": "^1.16.1",
+    "extend": "^3.0.2",
+    "hbs": "^4.0.4",
+    "morgan": "^1.9.1",
+    "samlp": "github:mcguinness/node-samlp",
+    "xml-formatter": "^1.1.0",
+    "xmldom": "^0.1.27",
+    "yargs": "^13.2.2"
   }
 }
