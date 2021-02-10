@@ -16,7 +16,8 @@ var profile = {
 /**
  * SAML Attribute Metadata
  */
-var metadata = [{
+var metadata = [
+  {
   id: "firstName",
   optional: false,
   displayName: 'First Name',
